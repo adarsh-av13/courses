@@ -25,4 +25,7 @@ y = x[::-1]
 
 # add each no of both lists
 for i in range(n):
-    print(x[i] + y[i], end=" ")
+	if i < (n-1):
+		print(x[i] + y[i], end = " ")
+	else:
+		print(x[i] + y[i], end = "")
