@@ -1,5 +1,6 @@
 '''
 29/08/2019
+The power of Randomness 
 You all have used the random library of python. You have seen in the screen-cast of how powerful it is.
 In this assignment, you will sort a list let's say list_1 of numbers in increasing order using the random library.
 
@@ -28,7 +29,39 @@ Example:    Input:      4
 Explanation: 
 The first line of the input is 4. Which means that n is 4, or the number of elements in list_1 is 4. The elements of list_1 are 3, 1, 2, 5 in this order.
 The sorted version of this list is 1 2 3 5, which is the output.
+
+Solution:
+
+from random import randint
+n = int(input())
+arr = []
+for i in range(n):
+    x = int(input())
+    arr.append(x)
+
+sorted = True
+
+while(sorted):
+    j = randint(0,n-1)
+    i = randint(0,n-1)
+    arr[i],arr[j] = arr[j],arr[i]
+    for k in range(0,n-1):
+        if (arr[k] > arr[k+1]):
+            sorted = False
+    
+    if(sorted):
+        break
+    else:
+        sorted = True
+
+for i in range(n):
+    if(i==n-1):
+        print(arr[i])
+    else:
+        print(arr[i],end=" ")
 '''
+
+
 from random import randint # import random library
 n = int(input())
 my_list = []
