@@ -40,7 +40,7 @@ for i in range (0, 30):
                 break 
         else:
             prime_list.append(i)
-            s += i
+            s =s + i
 
 prime_list_length = len(prime_list)
 #print(prime_list)
